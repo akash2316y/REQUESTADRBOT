@@ -167,7 +167,7 @@ async def not_joined(client: Client, message: Message):
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=f"Processing...")
     users = await full_userbase()
-    await msg.edit(f"35052 Users Are Using This Bot")
+    await msg.edit(f"{len(users)} Users Are Using This Bot")
 
 
 # Function to handle file deletion with Get Video & Close Button
